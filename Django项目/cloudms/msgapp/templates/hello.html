@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my_web</title>
+    <link rel="stylesheet" href="{% static 'css/1.css' %}">
+</head>
+<body>
+<h1 >欢迎来到我的网站！</h1> <br/>
+<h2 style="color:green">
+    <script>
+        document.write(Date());
+    </script>
+</h2>
+<br>
+<h3>点击   <a target="_blank" href="http://127.0.0.1:8000/msggate/" style="color:red;"> 这里 </a>  进入空间留言板</h3>
+<br>
+<div id="q">
+    <li><a target="_blank" href="http://www.baidu.com">有啥不知道，百度一下，啥都会！</a></li><br>
+    <li><a target="_blank" href="http://www.taobao.com">这里是淘宝，淘到你说好！</a></li><br>
+</div>
+    <a id="qw" target="_blank" href="https://v.qq.com/">精彩在这里，你想看的都有！</a><br>
+
+</body>
+
+</html>

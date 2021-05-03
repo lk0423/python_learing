@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录—-注册</title>
+</head>
+<body>
+<div>                                           <!-- 登录界面 -->
+    <form action="/login/" method="get">
+        账户<input type="text" name="name"/><br><br>
+        密码<input type="text" name="pass"/><br><br>
+        &nbsp;<input type="submit" name="submit" value="登录"/> &nbsp;
+        <input type="reset" name="reset" value="重置"/>
+    </form>
+    <br><br>
+   {% for line in data %}                       <!--  这里接受来自 views.py 中返回的数据-->
+    <tr>
+        <td>{{ line.name }}</td>
+        <td align="center">{{ line.status }}</td>
+    </tr>
+    {% endfor %}
+</div>
+<div>                                           <!-- 注册界面 -->
+    <form action="/login/" method="post">
+        {% csrf_token %}
+        账户<input type="text" name="name"/><br><br>
+        密码<input type="text" name="pass"/><br><br>
+        &nbsp;<input type="submit" name="submit" value="注册"/> &nbsp;
+        <input type="reset" name="reset" value="重置"/>
+    </form>
+</div>
+</body>
+</html>
